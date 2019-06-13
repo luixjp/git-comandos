@@ -102,10 +102,19 @@ git remote
 ou
 git remote -v
 
-#Para enviar dados para o reporsitorio remoto (ja conectado):
+#Para enviar dados para o repositorio remoto (ja conectado):
 # indicamos o diretorio remoto (origin) e o branch local (master) que 
 #deseja enviar (push)
 git push origin master
+
+#Para receber (pull) dados do repositorio remoto (GitHub) para o repositorio local:
+git pull origin master
+
+#Para clonar um repositorio remoto, i.e: https://github.com/luixjp/git-comandos.git
+git clone https://github.com/luixjp/git-comandos.git
+
+
+
 
 
 
