@@ -113,9 +113,17 @@ git pull origin master
 #Para clonar um repositorio remoto, i.e: https://github.com/luixjp/git-comandos.git
 git clone https://github.com/luixjp/git-comandos.git
 
+#Fazer um commit de um arquivo ou mais arquivos modificados:
+git commit -m "<sua mensagem>" <files> <file2> <...>
 
+#Para verificar as diferencas remotas (HEADs) do repositorio remoto com o local,
+#utilizamos o comando git fetch, o comando pull recebe os dados remotos, ja o comando
+#fetch busca apenas as diferencas no branch (ramo) atual, portanto e interessante para se
+#fazer o merge antes de fazer o pull.
+git fetch
 
-
+#Apos o fetch para verificar as diferencas e fazer o merge:
+git merge master origin/master
 
 
 
