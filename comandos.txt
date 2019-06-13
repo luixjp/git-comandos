@@ -1,0 +1,122 @@
+#instalar o git
+#Acessar o site: https://git-scm.com/downloads e seguir as instruções
+
+#verificar a versão do Git instalado
+git --version
+
+#verificar o status do git
+git status
+
+#colorir
+git config --global color.ui auto
+
+#identificar usuário
+git config global user.name "Your name"
+
+#identifica email do usuário
+git config global user.email "youremail@domain.com"
+
+#definir editor padrão
+git config --global core.editor "subl -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+#clonar um repositorio (exemplo Famav)
+git clone https://github.com/luixjp/famav.git
+
+#diferença de todos os arquivos (no diretorio e na staging area)
+git diff
+
+#diferença entre dois commits (exemplo commit abc123 e vxz987)
+git diff abc123 vxz987
+
+#realizar um commit completo (-a : all)
+git commit -a -m "Commit message"
+
+#descarta alterações nos arquivo (perde todas a alterações não commitadas!
+git reset hard
+
+#realizar um checkout no commit ID 91ef3c2
+git checkout 91ef3c2
+
+#mostrar todos os commits que tenham sidos checados recentemente
+git reflog
+
+#mostrar o log de commits (use q para sair)
+git log
+
+#mostrar as estatisticas do log de commits (use q para sair)
+git log --stat
+
+#checkout (volta o(s) arquivo(s) para a versão do último commit)
+git checkout
+
+#configurar workspace do git no windows (Git Bash)
+# Pegue o arquivo git-completion.bash, .bash_profile e git-prompt.sh no diretorio deste tutorial
+
+git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+#criar um repositório git (criação do diretório oculto: .git)
+git init
+
+#adicionar um "arquivo" ao repositório git, com o arquivo dentro do repositório digitar:
+git add "arquivo"
+
+#para remover um "arquivo" adicionado por engano:
+git reset "arquivo"
+
+#realizar um commit no git:
+git commit -m "Commit message"
+
+#diferença de todos os arquivos (da staging area com o último commit (mais recente))
+git diff --staged
+
+#para listar os ramos (branches)
+git branch
+
+#para criar um novo ramo (branch)
+git branch novo-branch
+
+#para trocar de ramo (branch)
+git checkout novo-branch
+
+#para ver o log com grafico em uma linha nos ramos master e coins
+git log --graph --oneline master coins
+
+#para criar um novo ramo e já fazer o checkout
+git checkout -b novo-branch
+
+#para fazer o merge de um branch
+git merge master novo-branch
+
+#depois do merge podemos deletar o branch (exclui apenas o label)
+git branch -d novo-branch
+
+#Para visualizar e criar acesso remotos (github) em origin
+git remote add origin git@github.com:xyz....
+
+#Para visualizar em qual acesso remoto você está digite:
+git remote 
+ou
+git remote -v
+
+#Para enviar dados para o reporsitorio remoto (ja conectado):
+# indicamos o diretorio remoto (origin) e o branch local (master) que 
+#deseja enviar (push)
+git push origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
